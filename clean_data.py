@@ -23,3 +23,8 @@ df_new.info()
 
 # save dataframe to csv file
 df_new.to_csv("cleaned_popular_city_weather.csv", index=False)
+
+import sqlite3
+conn = sqlite3.connect('weather_database.db')
+df_new.to_sql('weather', conn, if_exists='replace', index=False)
+conn.close()
