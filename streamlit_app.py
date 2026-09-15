@@ -6,7 +6,7 @@ import plotly.express as px  # For interactive charts
 import seaborn as sns
 
 #import database
-conn = sqlite3.connect('/Users/zhenzhu/python_class/CTD-capstone-project/weather_database.db')
+conn = sqlite3.connect('weather_database.db')
 cursor = conn.cursor()
 query = """
 SELECT * FROM weather
